@@ -1,8 +1,4 @@
-/* eslint-disable no-unused-vars */
-import Currency from './3-currency';
-
 export default class Pricing {
-  /* eslint-disable no-underscore-dangle */
   constructor(amount, currency) {
     this._amount = amount;
     this._currency = currency;
