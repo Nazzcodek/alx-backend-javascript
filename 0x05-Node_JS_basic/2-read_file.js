@@ -6,10 +6,10 @@ function countStudents(path) {
     const lines = data.split('\n');
 
     const fieldCounts = {};
-
     const fieldLists = {};
-
-    lines.forEach((line) => {
+    // eslint-disable-next-line no-plusplus
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i];
       if (line.trim() !== '') {
         const student = line.split(',');
         const field = student[0];
@@ -22,9 +22,9 @@ function countStudents(path) {
           fieldLists[field].push(student[1]);
         }
       }
-    });
+    }
 
-    console.log(`Number of students: ${lines.length - 1}`);
+    console.log(`Number of students: ${lines.length - 2}`);
     Object.keys(fieldCounts).forEach((field) => {
       console.log(`Number of students in ${field}: ${fieldCounts[field]}`);
       console.log(`List: ${fieldLists[field].join(', ')}`);
