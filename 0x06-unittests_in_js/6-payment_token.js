@@ -1,5 +1,5 @@
 function getPaymentTokenFromAPI(success) {
-  return New Promise((resolve) => {
+  return new Promise((resolve) => {
     if (success) {
       resolve({data: 'Successful response from the API' });
     }
